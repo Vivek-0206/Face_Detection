@@ -12,8 +12,8 @@ from os.path import isfile, join
 
 def load_model():
 
-    prototxt = r"C:\VIVEK\1.PYTHON_DEV\project\1.CLG_PROJECT\CNN\DEEP_LEARNING\Face_Detection\SSD\Model\deploy.prototxt"
-    model = r"C:\VIVEK\1.PYTHON_DEV\project\1.CLG_PROJECT\CNN\DEEP_LEARNING\Face_Detection\SSD\Model\res10_300x300_ssd_iter_140000.caffemodel"
+    prototxt = r"C:\VIVEK\1.PYTHON_DEV\project\1.CLG_PROJECT\Face_Detection\Face_Detection_With_OpenCV_SSD\Model\deploy.prototxt"
+    model = r"C:\VIVEK\1.PYTHON_DEV\project\1.CLG_PROJECT\Face_Detection\Face_Detection_With_OpenCV_SSD\Model\res10_300x300_ssd_iter_140000.caffemodel"
     detector = cv2.dnn.readNetFromCaffe(prototxt, model)
 
     return detector
