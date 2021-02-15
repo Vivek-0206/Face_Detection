@@ -38,8 +38,8 @@ def detect_face(image):
 
 def face_detection(src, des):
     """
-	Detect image from src folder and store face data into des folder
-	"""
+        Detect image from src folder and store face data into des folder
+        """
     image_file_path = []
     image_names = []
     # Directory of image of persons we'll be extracting faces from
@@ -85,10 +85,11 @@ def face_detection(src, des):
             bottom = int(instance["bottom"] * 300)
             right = int(instance["right"] * 300)
             top = int(instance["top"] * 300)
-            confidence_score = str(round(100 * instance["confidence"], 2)) + " %"
+            confidence_score = str(
+                round(100 * instance["confidence"], 2)) + " %"
             detected_face = base_img[
-                int(top * aspect_ratio_y) - 100 : int(bottom * aspect_ratio_y) + 100,
-                int(left * aspect_ratio_x) - 100 : int(right * aspect_ratio_x) + 100,
+                int(top * aspect_ratio_y) - 100: int(bottom * aspect_ratio_y) + 100,
+                int(left * aspect_ratio_x) - 100: int(right * aspect_ratio_x) + 100,
             ]
             path = (
                 des
@@ -102,4 +103,3 @@ def face_detection(src, des):
                 f"Done image {image_names[j]} with confidence score {confidence_score}"
             )
     print(f"Saved image to group_of_faces")
-
